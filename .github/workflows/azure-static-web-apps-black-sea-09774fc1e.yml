@@ -23,10 +23,10 @@ jobs:
          node-version: 18
       - name: Install Packages
         run: npm ci
-        working-directory: ./EWU-CSCD379-2024-Spring/Assignment1-Web
+        working-directory: ./Assignment1-Web
       - name: Build
         run: npm run generate
-        working-directory: ./EWU-CSCD379-2024-Spring/Assignment1-Web
+        working-directory: ./Assignment1-Web
     #  - name: run Vitest 
     #    run: npm run test
     #    working-directory: ./wordle-web
