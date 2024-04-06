@@ -3,7 +3,7 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - main
+      - Assignment1-Dev-Alexa
   workflow_dispatch:
 
 jobs:
@@ -23,10 +23,10 @@ jobs:
           node-version: 18
       - name: Install Packages
         run: npm ci
-        working-directory: ./wordle-web
+        working-directory: ./Assignment1-Web
       - name: Generate
         run: npm run generate
-        working-directory: ./wordle-web
+        working-directory: ./Assignment1-Web
       #- name: Run Vitest
       #  run: npm run test
       #  working-directory: ./wordle-web
@@ -39,6 +39,6 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "./wordle-web/.output/public" # App source code path
+          app_location: "./Assignment1-Web/dist" # App source code path
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
